@@ -13,12 +13,21 @@ const teekConfig = defineTeekConfig({
   banner: {
     name: "",
     bgStyle: "partImg",
-    imgSrc: ["/blog/bg1.webp", "/blog/bg2.webp", "/blog/bg3.webp"],
-    description: [
-      "上善若水。水善利万物而不争，处众人之所恶，故几于道。 —— 《道德经》",
+    imgSrc: [
+      "/blog/bg1.webp",
+      // "/blog/bg2.webp",
+      // "/blog/bg3.webp",
+      // "/blog/bg4.webp",
+      // "/blog/bg5.webp",
+      // "/blog/bg6.webp",
+      // "/blog/bg7.webp",
     ],
-    //  "昔者庄周梦为胡蝶，栩栩然胡蝶也...不知周之梦为胡蝶与？胡蝶之梦为周与？ —— 《齐物论》",
-    //  "红楼隔雨相望冷，珠箔飘灯独自归。 —— 李商隐《春雨》",
+    description: [
+      "上善若水。水善利万物而不争，处众人之所恶，故几于道。",
+      "昔者庄周梦为胡蝶，栩栩然胡蝶也...不知周之梦为胡蝶与？胡蝶之梦为周与？",
+      "红楼隔雨相望冷，珠箔飘灯独自归。",
+    ],
+
     descStyle: "types",
   },
   author: { name: "Aico", link: "" },
@@ -118,4 +127,14 @@ export default defineConfig({
       provider: "local",
     },
   },
+  head: [
+    [
+      "link",
+      { rel: "icon", type: "image/svg+xml", href: "/teek-logo-mini.svg" },
+    ],
+    [
+      "link",
+      { rel: "apple-touch-icon", type: "image/svg+xml", href: "/avatar.png" },
+    ],
+  ],
 });
