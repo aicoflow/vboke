@@ -114,6 +114,10 @@ export default defineConfig({
             text: "前端基础",
             link: "/前端基础/目录.md",
           },
+          {
+            text: "vue3",
+            link: "/vue3/01. vite原理.md",
+          },
         ],
       },
       {
