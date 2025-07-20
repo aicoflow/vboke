@@ -43,7 +43,7 @@ const teekConfig = defineTeekConfig({
     sidebarOption: {
       initItems: false,
     },
-    fileContentLoaderIgnore: ["**/前端基础/**"], //忽略这列路径下的文件生成到首页的文章列表及归档页
+    fileContentLoaderIgnore: ["**/前端基础/**", "**/vue3/**"], //忽略这列路径下的文件生成到首页的文章列表及归档页
 
     autoFrontmatter: false, //自动生成 frontmatter，默认关闭
     autoFrontmatterOption: {
