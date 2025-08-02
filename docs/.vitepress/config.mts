@@ -22,13 +22,13 @@ const teekConfig = defineTeekConfig({
       // "/blog/bg6.webp",
       // "/blog/bg7.webp",
     ],
-    description: [
-      "上善若水。水善利万物而不争，处众人之所恶，故几于道。",
-      "昔者庄周梦为胡蝶，栩栩然胡蝶也...不知周之梦为胡蝶与？胡蝶之梦为周与？",
-      "红楼隔雨相望冷，珠箔飘灯独自归。",
-    ],
+    // description: [
+    //   "上善若水。水善利万物而不争，处众人之所恶，故几于道。",
+    //   "昔者庄周梦为胡蝶，栩栩然胡蝶也...不知周之梦为胡蝶与？胡蝶之梦为周与？",
+    //   "红楼隔雨相望冷，珠箔飘灯独自归。",
+    // ],
 
-    descStyle: "types",
+    // descStyle: "types",
   },
   author: { name: "Aico", link: "" },
   blogger: {
@@ -43,12 +43,11 @@ const teekConfig = defineTeekConfig({
     sidebarOption: {
       initItems: false,
     },
-    fileContentLoaderIgnore: ["**/前端基础/**", "**/vue3/**"], //忽略这列路径下的文件生成到首页的文章列表及归档页
+    fileContentLoaderIgnore: ["**/前端基础/**", "**/Vue3/**"], //忽略这列路径下的文件生成到首页的文章列表及归档页
 
     autoFrontmatter: false, //自动生成 frontmatter，默认关闭
     autoFrontmatterOption: {
       pattern: ["**/前端基础/**"], //匹配路径下的文件
-
       transform: () => {
         return {};
       },
@@ -115,15 +114,15 @@ export default defineConfig({
             link: "/前端基础/目录.md",
           },
           {
-            text: "vue3",
-            link: "/vue3/01. vite原理.md",
+            text: "Vue3",
+            link: "/Vue3/01. vite原理.md",
           },
         ],
       },
-      {
-        text: "更多",
-        link: "/more",
-      },
+      // {
+      //   text: "更多",
+      //   link: "/more",
+      // },
     ],
     socialLinks: [{ icon: "github", link: "https://github.com/aicoflow" }],
 

@@ -5,11 +5,12 @@ layout: home
 
 <style>
 
-
+.name{
+   color: transparent !important;
+    background: -webkit-linear-gradient(10deg, rgb(189, 52, 254) 5%, rgb(228, 52, 152) 15%) text !important;
+}
   .slogan{
     text-align:center;
-      color: transparent !important;
-    background: -webkit-linear-gradient(10deg, rgb(189, 52, 254) 5%, rgb(228, 52, 152) 15%) text !important;
   }
 
 /* 文章标题样式 */
