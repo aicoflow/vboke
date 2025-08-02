@@ -43,11 +43,11 @@ const teekConfig = defineTeekConfig({
     sidebarOption: {
       initItems: false,
     },
-    fileContentLoaderIgnore: ["**/前端基础/**", "**/Vue3/**"], //忽略这列路径下的文件生成到首页的文章列表及归档页
+    fileContentLoaderIgnore: ["**/前端基础/**", "**/vue3/**"], //忽略这列路径下的文件生成到首页的文章列表及归档页
 
     autoFrontmatter: false, //自动生成 frontmatter，默认关闭
     autoFrontmatterOption: {
-      pattern: ["**/前端基础/**"], //匹配路径下的文件
+      pattern: ["**/前端基础/**", "**/vue3/**"], //匹配路径下的文件
       transform: () => {
         return {};
       },
@@ -115,7 +115,7 @@ export default defineConfig({
           },
           {
             text: "Vue3",
-            link: "/Vue3/01. vite原理.md",
+            link: "/vue3/01. vite原理.md",
           },
         ],
       },
@@ -131,10 +131,7 @@ export default defineConfig({
     },
   },
   head: [
-    [
-      "link",
-      { rel: "icon", type: "image/svg+xml", href: "/teek-logo-mini.svg" },
-    ],
+    ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.ico" }],
     [
       "link",
       { rel: "apple-touch-icon", type: "image/svg+xml", href: "/avatar.png" },
