@@ -5,7 +5,8 @@ categories:
   - 知识技能
 tags:
   - JavaScript
-articleShare: false
+sidebar: false
+article: true
 ---
 
 # Javascript 中 Symbol 类型

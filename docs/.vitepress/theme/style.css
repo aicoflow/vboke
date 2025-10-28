@@ -1,0 +1,20 @@
+/* 平滑滚动效果 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 优化滚动体验 */
+html,
+body {
+  scroll-padding-top: 80px; /* 为固定头部留出空间 */
+}
+
+/* 针对 VitePress 内容区域的滚动优化 */
+.vp-doc,
+.VPContent {
+  scroll-behavior: smooth;
+}
+
+
+
+

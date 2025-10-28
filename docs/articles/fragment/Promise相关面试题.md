@@ -5,6 +5,8 @@ categories:
   - 知识技能
 tags:
   - JavaScript
+sidebar: false
+article: true
 ---
 
 # Promise相关面试题

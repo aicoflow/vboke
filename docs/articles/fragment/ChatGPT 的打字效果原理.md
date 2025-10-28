@@ -5,6 +5,8 @@ categories:
   - 应用笔记
 tags:
   - SSE
+sidebar: false
+article: true
 ---
 
 # ChatGPT 的打字效果原理

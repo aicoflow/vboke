@@ -1,8 +1,6 @@
 import { defineConfig } from "vitepress";
 import { defineTeekConfig } from "vitepress-theme-teek/config";
 
-const teekBlogCommonConfig = {};
-
 // Teek 主题配置
 const teekConfig = defineTeekConfig({
   teekHome: true,
@@ -14,14 +12,11 @@ const teekConfig = defineTeekConfig({
     name: "",
     bgStyle: "partImg",
     imgSrc: [
-      "/blog/bg1.webp",
-      // "/blog/bg2.webp",
-      // "/blog/bg3.webp",
-      // "/blog/bg4.webp",
-      // "/blog/bg5.webp",
-      // "/blog/bg6.webp",
-      // "/blog/bg7.webp",
+      "/blog-bg/bg1.webp",
+      // "/blog-bg/bg2.webp",
+
     ],
+    //首页背景图描述
     // description: [
     //   "上善若水。水善利万物而不争，处众人之所恶，故几于道。",
     //   "昔者庄周梦为胡蝶，栩栩然胡蝶也...不知周之梦为胡蝶与？胡蝶之梦为周与？",
@@ -30,40 +25,22 @@ const teekConfig = defineTeekConfig({
 
     // descStyle: "types",
   },
-  author: { name: "Aico", link: "" },
+  author: { name: "", link: "" },  // 不显示作者名称
   blogger: {
     avatar: "/avatar.png",
     shape: "circle-rotate",
-    name: "Aico",
+    name: "aico",
     slogan: "不是Bug，是隐藏彩蛋…",
   },
 
-  //vite插件
-  vitePlugins: {
-    sidebarOption: {
-      initItems: false,
-    },
-    fileContentLoaderIgnore: ["**/前端基础/**", "**/vue3/**"], //忽略这列路径下的文件生成到首页的文章列表及归档页
-
-    autoFrontmatter: false, //自动生成 frontmatter，默认关闭
-    autoFrontmatterOption: {
-      pattern: ["**/前端基础/**", "**/vue3/**"], //匹配路径下的文件
-      transform: () => {
-        return {};
-      },
-      recoverTransform: false,
-    },
-  },
-
-  //精选文章卡片
-  topArticle: {
+   //精选文章卡片
+   topArticle: {
     enabled: false, // 是否启用精选文章卡片
     limit: 5, // 一页显示的数量
     autoPage: false, // 是否自动翻页
     pageSpeed: 4000, // 翻页间隔时间，单位：毫秒。autoPage 为 true 时生效
     dateFormat: "yyyy-MM-dd hh:mm:ss", // 精选文章的日期格式
   },
-
   //友情链接卡片
   friendLink: {
     enabled: false, // 是否启用友情链接卡片
@@ -86,6 +63,32 @@ const teekConfig = defineTeekConfig({
 
   //文章分享按钮是否显示
   articleShare: { enabled: true },
+
+  //文章分析信息显示配置
+  articleAnalyze: {
+    showInfo: true, // 展示文章信息
+    showIcon: true,
+  },
+
+  //vite插件
+  vitePlugins: {
+    sidebarOption: {
+      initItems: false,
+    },
+    fileContentLoaderIgnore: ["**/articles/前端基础/**", "**/articles/vue3/**"], //忽略这列路径下的文件生成到首页的文章列表及归档页
+    docAnalysis: true, // 启用文档分析功能
+    // autoFrontmatter: false, //自动在具体文章文件下写入 frontmatter，默认关闭
+    // autoFrontmatterOption: {
+    //   pattern: ["**/articles/前端基础/**", "**/articles/vue3/**"  ], //匹配路径下的文件
+    //   transform: () => {
+    //     return {};
+    //   },
+    //   recoverTransform: false,
+    // },
+  },
+
+
+  
 });
 
 // https://vitepress.dev/reference/site-config
@@ -100,6 +103,7 @@ export default defineConfig({
       { text: "首页", link: "/" },
       {
         text: "索引",
+        activeMatch: "^/(categories|tags|archives)",
         items: [
           { text: "分类页", link: "/categories" },
           { text: "标签页", link: "/tags" },
@@ -108,23 +112,24 @@ export default defineConfig({
       },
       {
         text: "文档",
+        activeMatch: "^/articles",
         items: [
           {
             text: "前端基础",
-            link: "/前端基础/目录.md",
+            link: "/articles/前端基础/目录.md",
           },
           {
             text: "Vue3",
-            link: "/vue3/01. vite原理.md",
+            link: "/articles/vue3/01. vite原理.md",
           },
         ],
       },
-      // {
-      //   text: "更多",
-      //   link: "/more",
-      // },
+      {
+        text: "更多",
+        link: "/more",
+      },
     ],
-    socialLinks: [{ icon: "github", link: "https://github.com/aicoflow" }],
+    // socialLinks: [{ icon: "github", link: "https://github.com/aicoflow" }],
 
     search: {
       provider: "local",
