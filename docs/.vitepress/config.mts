@@ -23,7 +23,6 @@ const teekConfig = defineTeekConfig({
     bgStyle: "partImg",
     imgSrc: [
       "/blog-bg/bg1.webp",
-      // "/blog-bg/bg2.webp",
 
     ],
     //首页背景图描述
