@@ -146,6 +146,12 @@ export default defineConfig({
       provider: "local",
     },
 
+    // 配置文章大纲（右侧目录导航）
+    outline: {
+      level: [1, 6], // 显示 h1 到 h6 的所有标题
+      label: "目录",
+    },
+
     // 自动扫描 articles 目录，为每个子目录生成独立的侧边栏（自动排除 fragment）
     sidebar: generateSidebar(getArticlesDirectories()),
   },
