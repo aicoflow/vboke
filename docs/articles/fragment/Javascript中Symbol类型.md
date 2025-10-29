@@ -1,6 +1,7 @@
 ---
-date: 2025-06-27 03:32:51
+date: 2023-06-27 03:32:51
 title: Javascript中Symbol类型
+description: ES5 的对象属性名都是字符串，这很容易造成属性名的冲突。ES6 引入了 Symbol，保证每个属性的名字都是独一无二，这样就从根本上防止属性名的冲突。Symbol 是 ES6 中新增的一种原始数据类型，被划分到了基本数据类型中。
 categories:
   - 知识技能
 tags:

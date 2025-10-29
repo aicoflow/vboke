@@ -1,6 +1,7 @@
 ---
-date: 2023-06-22 20:36:51
+date: 2023-02-22 20:36:51
 title: ChatGPT 的打字效果原理
+description: 深入解析 ChatGPT 一字一字展示答案的打字效果实现原理，介绍 SSE（Server-Sent Events）技术在实时数据推送中的应用，以及如何实现类似的打字机效果。
 categories:
   - 应用笔记
 tags:
@@ -276,13 +277,6 @@ SSE 是一种由服务器向浏览器实时主动推送数据的技术，ChatGPT
 
 - 后端: 需添加响应头：`'Content-Type': 'text/event-stream'`
 - 前端: 通过 EventSource 或 fetch 实现请求
-
-## 拓展阅读[](https://megasu.atomgit.net/front-end-solutions/solutions/chatgpt.html#拓展阅读)
-
-- [服务器发送事件](https://developer.mozilla.org/zh-CN/docs/Web/API/Server-sent_events)
-- [EventSource](https://developer.mozilla.org/zh-CN/docs/Web/API/EventSource)
-- [使用 Fetch](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
-- [ChatGPT 掘金热门文章](https://juejin.cn/search?query=ChatGPT&type=0&sort=2)
 
 如果想**快速部署**一个私人 ChatGPT 网站，不受访问限制，可参考以下开源仓库。
 

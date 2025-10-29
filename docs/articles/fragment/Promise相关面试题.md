@@ -1,6 +1,7 @@
 ---
-date: 2024-05-06 20:36:51
+date: 2023-05-06 20:36:51
 title: Promise相关面试题
+description: Promise 是异步场景的一种解决方案，能有效的避免回调地狱的产生，使异步代码更加清晰、统一。本文深入讲解 Promise 的概念、规范、使用方法以及常见面试题。
 categories:
   - 知识技能
 tags:
