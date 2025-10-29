@@ -1,8 +1,18 @@
 import { defineConfig } from "vitepress";
 import { defineTeekConfig } from "vitepress-theme-teek/config";
+import { generateSidebar } from "vitepress-sidebar";
+import { getArticlesDirectories } from "./utils";
 
 // Teek 主题配置
 const teekConfig = defineTeekConfig({
+  siteAnalytics: [
+    {
+      provider: "google",
+      options: {
+        id: "G-14N6YHYX3P",
+      },
+    },
+  ],
   teekHome: true,
   vpHome: false,
   wallpaper: {
@@ -73,7 +83,8 @@ const teekConfig = defineTeekConfig({
   //vite插件
   vitePlugins: {
     sidebarOption: {
-      initItems: false,
+      initItems: false, // 关闭自动生成，改用手动配置实现精确的路径隔离
+      ignoreList: ["**/fragment/**"], // 排除 fragment 目录
     },
     fileContentLoaderIgnore: ["**/articles/前端基础/**", "**/articles/vue3/**"], //忽略这列路径下的文件生成到首页的文章列表及归档页
     docAnalysis: true, // 启用文档分析功能
@@ -134,6 +145,9 @@ export default defineConfig({
     search: {
       provider: "local",
     },
+
+    // 自动扫描 articles 目录，为每个子目录生成独立的侧边栏（自动排除 fragment）
+    sidebar: generateSidebar(getArticlesDirectories()),
   },
   head: [
     ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.ico" }],
