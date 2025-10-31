@@ -5,9 +5,8 @@ description: Promise 是异步场景的一种解决方案，能有效的避免�
 categories:
   - 知识技能
 tags:
-  - JavaScript
+  - 前端优化
 sidebar: false
-article: true
 ---
 
 # Promise相关面试题
